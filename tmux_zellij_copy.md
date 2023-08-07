@@ -18,3 +18,4 @@ So copy text from ssh remote tmux, do below additional configuration
 
 #### tmux bind command - be sure ${_DOTFILES} is set, or use something else
     bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel '${_DOTFILE}/tmux-copy.sh'
+You need to restart tmux completely (using tmux kill-server) after making changes to ~/.tmux.conf
