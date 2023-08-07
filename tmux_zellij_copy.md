@@ -10,12 +10,11 @@ The available tools are:
 
 These tools talk to the X(7) server (or equivalent) directly so without additional configuration they only work on the local computer
 
-# Bash script, `tmux-copy.sh`
+#### Bash script, `tmux-copy.sh`
 #!/bin/bash
 mkdir -p ~/tmp
 tee ~/tmp/tmux-clipboard.txt | xclip -in -selection clipboard > /dev/null
 
-
-# tmux bind command - be sure ${_DOTFILES} is set, or use something else
+#### tmux bind command - be sure ${_DOTFILES} is set, or use something else
 bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel \
     '${_DOTFILE}/tmux-copy.sh'
