@@ -9,7 +9,7 @@ The available tools are:
 - macOS has a builtin tool called pbcopy(1).
 
 These tools talk to the X(7) server (or equivalent) directly so without additional configuration they **only work on the local computer**
-
+So copy text from ssh remote tmux, do below additional configuration
 #### Bash script, `tmux-copy.sh`
 #!/bin/bash
 mkdir -p ~/tmp
