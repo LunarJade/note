@@ -16,5 +16,4 @@ mkdir -p ~/tmp
 tee ~/tmp/tmux-clipboard.txt | xclip -in -selection clipboard > /dev/null
 
 #### tmux bind command - be sure ${_DOTFILES} is set, or use something else
-bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel \
-    '${_DOTFILE}/tmux-copy.sh'
+bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel '${_DOTFILE}/tmux-copy.sh'
