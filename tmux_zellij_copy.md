@@ -12,9 +12,9 @@ These tools talk to the X(7) server (or equivalent) directly so without addition
 
 So copy text from ssh remote tmux, do below additional configuration
 #### Bash script, `tmux-copy.sh`
-#!/bin/bash
-mkdir -p ~/tmp
-tee ~/tmp/tmux-clipboard.txt | xclip -in -selection clipboard > /dev/null
+    #!/bin/bash
+    mkdir -p ~/tmp
+    tee ~/tmp/tmux-clipboard.txt | xclip -in -selection clipboard > /dev/null
 
 #### tmux bind command - be sure ${_DOTFILES} is set, or use something else
-bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel '${_DOTFILE}/tmux-copy.sh'
+    bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel '${_DOTFILE}/tmux-copy.sh'
